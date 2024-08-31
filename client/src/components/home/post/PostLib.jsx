@@ -35,7 +35,7 @@ const PostLib = ({ post }) => {
             <p className="post-author">Author: {post.username}</p>
             <div className='postLib-delete-div'>
                 <div className='postLib-delete-btn'>
-                    <button className='postLib-delete-button'>Remove from Library</button>
+                    <button className='postLib-delete-button'>Delete</button>
                     <ImBin2 />
                 </div>
             </div>

@@ -64,16 +64,17 @@
 .postLib-delete-btn{
     background: url('https://i.pinimg.com/564x/3f/10/ae/3f10ae365b60fbebb4c685be08d488b6.jpg');
     color: white;
-    width: 150px;
-    height: 20px;
+    width: 100px;
+    height: 35px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    padding: 8px 12px;
     font-size: 14px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    padding-inline: 30px;
 }
 
 .postLib-delete-btn:hover{
