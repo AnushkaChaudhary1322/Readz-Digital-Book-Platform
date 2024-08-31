@@ -28,7 +28,9 @@ const Post = ({ post }) => {
 
     return (
         <div className="post-container">
+            <Link to={`details/${post._id}`} className='post-link-link-link'>
             <img className="post-image" src={url} alt="post" />
+            </Link>
             <p className="post-category">{post.categories}</p>
             <Link to={`details/${post._id}`} className='post-link-link-link'>
             <div className="post-heading">{post.title}</div>
@@ -37,7 +39,7 @@ const Post = ({ post }) => {
             <div className="post-actions">
                 <button onClick={handleClick} className="post-button-library">
                     <FaPlus className="button-icon" />
-                    Add to Library
+                    Add to Reading List
                 </button>
                 <div
                     className={`post-button-heart ${isFavorited ? 'clicked' : ''}`}

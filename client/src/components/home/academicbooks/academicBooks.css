@@ -1,6 +1,6 @@
 .slider-academic-container {
     position: relative;
-    max-width: 900px;
+    max-width: 80%;
     margin: auto;
     padding: 20px;
     display: flex;
@@ -12,8 +12,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 100px;
-    width: 100%;
+    width: 90%;
     margin-top: 50px;
+    transition: transform 0.5s ease-in-out;
 }
 
 .grid-academic-item-content{
@@ -74,25 +75,27 @@
 }
 
 .slider-academic-arrow {
-    background-color: rgba(51, 51, 51, 0.3);
     color: white;
     border: none;
     cursor: pointer;
-    padding: 10px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 24px;
+    font-size: 30px;
     z-index: 10;
-    opacity: 0.2; 
+    opacity: 0.8; 
     transition: opacity 0.3s ease, background-color 0.3s ease;
 }
 
 .slider-academic-arrow.left {
+    color: black;
+    font-size: 30px;
     left: -40px;
 }
 
 .slider-academic-arrow.right {
+    color: black;
+    font-size: 30px;
     right: -40px;
 }
 
@@ -100,8 +103,10 @@
     opacity: 1;
 }
 
-.slider-academic-arrow:hover {
-    background-color: rgba(51, 51, 51, 0.7);
+.slider-academic-arrow.right:hover,
+.slider-academic-arrow.left:hover {
+    color: black;
+    opacity: 1;
 }
 
 @media (max-width: 768px) {

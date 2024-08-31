@@ -45,11 +45,11 @@
     cursor: pointer;
     text-decoration: none;
     color: white;
-    padding: 5px;
+    padding: 2px;
     background: url('https://i.pinimg.com/564x/3f/10/ae/3f10ae365b60fbebb4c685be08d488b6.jpg');
     border: 1px solid transparent;
     border-radius: 10px;
     text-align: center;
-    min-width: 40px; 
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    min-width: 30px; 
+    font-size: 15px;
 }

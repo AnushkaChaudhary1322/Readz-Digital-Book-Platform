@@ -15,7 +15,7 @@ const Home = () => {
 
             <div className="academic-section">
                 <div className="section-heading">
-                <h2 >Academic Related Books</h2>
+                <h2 >Educational Books</h2>
                 </div>
                 <AcademicBooks /> 
             </div>

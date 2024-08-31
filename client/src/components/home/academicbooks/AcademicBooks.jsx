@@ -35,7 +35,7 @@ const AcademicBooks = () => {
     return (
         <div className="slider-academic-container">
             <button className="slider-academic-arrow left" onClick={handlePrevSlide}>
-                &#9664;
+            &#10094;
             </button>
             <div className="grid-academic-container">
                 {academicBooksData[currentSlide].map((book, index) => (
@@ -53,7 +53,7 @@ const AcademicBooks = () => {
                 ))}
             </div>
             <button className="slider-academic-arrow right" onClick={handleNextSlide}>
-                &#9654;
+            &#10095;
             </button>
         </div>
     );

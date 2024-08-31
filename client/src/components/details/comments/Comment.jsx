@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { API } from '../../../service/api';
 import { DataContext } from "../../../context/DataProvider";
 import './comment.css';
+import { ImBin2 } from "react-icons/im";
 
 const Comment = ({ comment, setToggle }) => {
     const { account } = useContext(DataContext);
@@ -26,7 +27,7 @@ const Comment = ({ comment, setToggle }) => {
             <div className="comment-text-container">
                 <p className="comment-text">{comment.comments}</p>
                 {comment.name === account.username && (
-                    <span className="comment-delete-icon" onClick={() => removeComment()}>&#128465;</span>
+                    <span className="comment-delete-icon" onClick={() => removeComment()}><ImBin2/></span>
                 )}
             </div>
         </div>

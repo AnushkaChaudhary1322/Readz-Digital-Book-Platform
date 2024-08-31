@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './premiumBooksSlider.css'; // Import CSS for styling
+import './premiumBooksSlider.css';
 
 const PremiumBooksSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -50,7 +50,7 @@ const PremiumBooksSlider = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);
-        }, 5000);
+        }, 8000);
 
         return () => clearInterval(interval);
     }, [slides.length]);
