@@ -1,0 +1,123 @@
+.library-container-wrapper {
+    width: 80%;
+    margin-left: 230px;
+    overflow-x: hidden; 
+    position: relative; 
+    min-height: 550px; 
+    padding-bottom: 20px; 
+    transform: translateY(-50px);
+}
+
+.library-main-heading {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.library-section-selector{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-top: 1px solid #fd6c11;
+    border-bottom: 1px solid #fd6c11;
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.library-section-selector .active {
+    font-weight: bold;
+    color: #fd6c11;
+}
+
+.library-lib,
+.library-pre,
+.library-aca,
+.library-fav{
+    padding: 8px;
+    padding-inline: 70px;
+    cursor: pointer;
+}
+
+.library-lib,
+.library-pre,
+.library-aca{
+    border-right: 1px solid  #fd6c11;
+}
+
+.library-your-library-section, 
+.library-your-favorite-section,
+.library-your-premium-section,
+.library-your-academic-section {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateX(-100%);
+    display: none; /* Hide sections by default */
+}
+
+.library-your-library-section.visible, 
+.library-your-favorite-section.visible,
+.library-your-premium-section.visible,
+.library-your-academic-section.visible {
+    opacity: 1;
+    transform: translateX(0);
+    display: block; /* Show section when active */
+}
+
+.library-your-library-section.hidden, 
+.library-your-favorite-section.hidden,
+.library-your-premium-section.hidden,
+.library-your-academic-section.hidden {
+    opacity: 0;
+    transform: translateX(100%);
+    display: none; /* Hide section when not active */
+}
+
+.posts-container-library-readingList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .library-container-wrapper{
+        width: 88%;
+        margin-left: 80px;
+    }
+
+    .library-section-selector{
+        height: 50px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .library-lib,
+    .library-pre,
+    .library-aca,
+    .library-fav{
+        padding-inline: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .library-container-wrapper{
+        width: 82%;
+    }
+
+    .library-section-selector{
+        height: 50px;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .library-lib,
+    .library-pre,
+    .library-aca,
+    .library-fav{
+        padding-inline: 10px;
+    }
+}

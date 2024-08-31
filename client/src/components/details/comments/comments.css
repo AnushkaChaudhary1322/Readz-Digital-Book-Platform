@@ -1,0 +1,51 @@
+.comments-box {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    padding: 40px;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.commenr-box-heading{
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.comments-container {
+    display: flex;
+}
+
+.comments-image {
+    width: auto;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.styled-textarea {
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    padding: 8px;
+    margin: 0 20px;
+    border-radius: 16px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+.post-button {
+    height: 50px;
+    background: url('https://i.pinimg.com/564x/3f/10/ae/3f10ae365b60fbebb4c685be08d488b6.jpg');
+    border-radius: 16px;
+    color: white;
+    border: none;
+    padding-inline:40px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.post-button:hover {
+    transform: scale(1.02);
+}

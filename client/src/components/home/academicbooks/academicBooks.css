@@ -1,0 +1,133 @@
+.slider-academic-container {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-academic-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.grid-academic-item-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.grid-academic-item {
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    height: 100px;
+    width: 220px;
+}
+
+.grid-academic-item-1 {
+    background: url('https://i.pinimg.com/564x/87/ed/68/87ed68680def92f7c05e482d5414d05d.jpg');
+}
+
+.grid-academic-item-2 {
+    background: url('https://i.pinimg.com/564x/87/ed/68/87ed68680def92f7c05e482d5414d05d.jpg');
+}
+
+.grid-academic-item-3 {
+    background: url('https://i.pinimg.com/564x/87/ed/68/87ed68680def92f7c05e482d5414d05d.jpg');
+}
+
+.grid-academic-item-4 {
+    background: url('https://i.pinimg.com/564x/87/ed/68/87ed68680def92f7c05e482d5414d05d.jpg');
+}
+
+.grid-academic-item-5 {
+    background: url('https://i.pinimg.com/564x/87/ed/68/87ed68680def92f7c05e482d5414d05d.jpg');
+}
+
+.grid-academic-item-6 {
+    background: url('https://i.pinimg.com/564x/87/ed/68/87ed68680def92f7c05e482d5414d05d.jpg');
+}
+
+.book-academic-image {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+    z-index: 2;
+    transform: translateY(-50px);
+}
+
+.book-academic-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    color: white;
+}
+
+.slider-academic-arrow {
+    background-color: rgba(51, 51, 51, 0.3);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    z-index: 10;
+    opacity: 0.2; 
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.slider-academic-arrow.left {
+    left: -40px;
+}
+
+.slider-academic-arrow.right {
+    right: -40px;
+}
+
+.slider-academic-container:hover .slider-academic-arrow {
+    opacity: 1;
+}
+
+.slider-academic-arrow:hover {
+    background-color: rgba(51, 51, 51, 0.7);
+}
+
+@media (max-width: 768px) {
+    .grid-academic-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .slider-academic-arrow.left {
+        left: -30px;
+    }
+
+    .slider-academic-arrow.right {
+        right: -30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-academic-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .slider-academic-arrow.left {
+        left: -20px;
+    }
+
+    .slider-academic-arrow.right {
+        right: -20px;
+    }
+}

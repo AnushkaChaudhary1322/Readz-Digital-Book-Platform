@@ -1,0 +1,55 @@
+.comment-component {
+    margin-top: 30px;
+    color: black;
+    background: #F5F5F5;
+    padding: 10px;
+}
+
+.comment-container {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.comments-name-and-date-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.comment-name {
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.comment-date {
+    font-size: 14px;
+    color: #878787;
+}
+
+.comment-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment-text {
+    margin-top: 5px;
+    font-size: 16px;
+    margin-right: 10px; /* Space between text and icon */
+}
+
+.comment-delete-icon {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    background: url('https://i.pinimg.com/564x/3f/10/ae/3f10ae365b60fbebb4c685be08d488b6.jpg');
+    border: 1px solid transparent;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 40px; 
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}

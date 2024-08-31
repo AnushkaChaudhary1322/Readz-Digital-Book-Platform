@@ -1,0 +1,475 @@
+.about-banner{
+    max-height: 350px;
+    width: 100%;
+}
+
+.about-container {
+    width: 100%;
+    height: auto;
+}
+
+.banner-about {
+    width: 100%;
+    height: 80vh;
+    background-position: left 0px bottom 0px;
+    background-size: cover;
+}
+
+.content-wrapper-about {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 60px;
+}
+
+.about-image-container{
+    width: 600px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-image-one{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.about-image-one img{
+    width: 200px;
+    height: 200px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-image-two img{
+    width: 420px;
+    height: 200px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.content-wrapper-about h5 {
+    margin-top: 50px;
+}
+
+.about-text {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.about-text-container{
+    width: 550px;
+}
+
+.about-text-container h2{
+    margin-top: 40px;
+    font-size: 32px;
+    font-weight: 600;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.about-text-container p{
+    color: rgb(95, 94, 94);
+}
+
+.dropdown-about-container {
+    background-color: red;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dropdown-about-1,
+.dropdown-about-2,
+.dropdown-about-3,
+.dropdown-about-4 {
+    width: 550px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-about-1:hover,
+.dropdown-about-2:hover,
+.dropdown-about-3:hover,
+.dropdown-about-4:hover {
+    background: #f56e1a;
+}
+
+.dropdown-about-title {
+    font-size: 24px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s;
+}
+
+.dropdown-arrow.rotate {
+    transform: rotate(90deg);
+}
+
+.dropdown-about-content {
+    margin-top: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    color: white;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.dropdown-about-content:hover p{
+    color: white; 
+}
+
+.dropdown-about-1.active .dropdown-about-content,
+.dropdown-about-2.active .dropdown-about-content,
+.dropdown-about-3.active .dropdown-about-content,
+.dropdown-about-4.active .dropdown-about-content {
+    display: block;
+    max-height: 200px; 
+    padding: 10px;
+}
+
+.dropdown-about:not(.active) {
+    height: 60px; 
+    transform: none;
+}
+
+/* Section 2 */
+
+.about-featured-books{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.about-section2-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+.about-featured-books-content{
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-featured-books-text{
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 20px;    
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-featured-books-text img{
+    width: auto;
+    height: 170px;
+}
+
+.about-featured-books-text h3{
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #036140;
+}
+
+.about-featured-books-text p{
+    margin-top: 8px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.about-featured-books-btn{
+    background: url('https://i.pinimg.com/564x/3f/10/ae/3f10ae365b60fbebb4c685be08d488b6.jpg');
+    width: 50%; 
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-featured-books-btn:hover{
+    transform: scale(1.05);
+}
+
+/* Review section */
+.review-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-container-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+
+.review-container-img-text{
+    background: url('https://i.pinimg.com/564x/87/ed/68/87ed68680def92f7c05e482d5414d05d.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 750px;
+    height: 500px;
+    margin-top: 30px;
+    padding: 35px;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 50px;
+}
+.review-border-box{
+    margin-top: 10px;
+    padding: 30px;
+    border: 5px solid white;
+    border-radius: 20px;
+}
+
+.quotes-img1{
+    position: absolute;
+    width: auto;
+    height: 60px;
+    transform: translate(-20px,-70px);
+}
+
+.quotes-img2{
+    position: absolute;
+    width: auto;
+    height: 60px;
+    transform: rotate(180deg);
+    margin-left: 600px;
+}
+
+.review-image-container {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+.review-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.review-image.active {
+    opacity: 1;
+}
+
+.review-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 650px;
+    margin-bottom: 0px;
+}
+
+.review-content p{
+    width: 500px;
+}
+
+.review-content h4{
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #f5640a;
+}
+
+.review-content p{
+    color: white;
+}
+
+.review-text {
+    display: none;
+}
+
+.review-text.active {
+    display: block;
+}
+
+.review-text h4 {
+    margin: 0 0 10px 0;
+}
+
+.review-text p {
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .content-wrapper-about{
+        margin-top: -100px;
+    }
+
+    .about-featured-books-content{
+        margin: 0px;
+        gap: 40px;
+    }
+
+    .about-featured-books-text{
+        width: 200px;
+        height: 370px;
+        padding: 20px;
+    }
+
+    .about-featured-books-text img{
+        width: auto;
+        height: 120px;
+    }
+
+    .about-featured-books-text p{
+        margin-top: 0;
+        margin-bottom: 5px;
+        padding: 5px;
+    }
+
+    .about-featured-books-btn{
+        width: 60%; 
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .review-container-img-text{
+        width: 500px;
+        height: 500px;
+    }
+
+    .review-border-box{
+        margin-top: 10px;
+        padding: 30px;
+    }
+
+    .quotes-img1{
+        height: 40px;
+        transform: translate(-20px,-50px);
+    }
+    
+    .quotes-img2{
+        height: 40px;
+        margin-left: 400px;
+    }
+
+    .review-image-container {
+        gap: 10px;
+    }
+    
+    .review-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .review-content {
+        width: 430px;
+        margin-bottom: 0px;
+    }
+    
+    .review-content p{
+        width: 430px;
+    }
+    
+    .review-content h4{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .content-wrapper-about {
+        padding: 40px;
+    }
+
+    .dropdown-about-1,
+    .dropdown-about-2,
+    .dropdown-about-3,
+    .dropdown-about-4 {
+        width: 400px;
+    }
+
+    .review-container-img-text{
+        width: 400px;
+        height: 500px;
+    }
+
+    .quotes-img1{
+        height: 30px;
+        transform: translateY(-30px);
+    }
+    
+    .quotes-img2{
+        height: 30px;
+        margin-left: 370px;
+    }
+
+    .review-border-box{
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .review-content {
+        width: 400px;
+        margin-bottom: 0px;
+    }
+
+    .review-content p{
+        width: 400px;
+    }
+
+}

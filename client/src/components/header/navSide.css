@@ -1,0 +1,139 @@
+.navSide-scrollbar {
+    height: 90%;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* .navSide-scrollbar:hover {
+    overflow-y: scroll;
+} */
+
+#navSide-style-1::-webkit-scrollbar-track {
+    border-radius: 2px;
+}
+
+#navSide-style-1::-webkit-scrollbar {
+    width: 5px;
+    background-color: #F7F7F7;
+}
+
+#navSide-style-1::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #BFBFBF;
+}
+
+.navSide-main-menu {
+    background-color: #1d1c1c;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    width: 200px;
+    transition: width 0.2s linear;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.navSide-main-menu:hover {
+    width: 250px; 
+}
+
+.navSide-icon-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    margin-top: 20px;
+}
+
+.navSide-icon-content-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; 
+    height: 60px;
+    text-align: left;
+    padding-left: 10px; 
+}
+
+.navSide-icon {
+    font-size: 30px;
+    color: white;
+    margin-left: 10px;
+}
+
+.navSide-icon-text-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.navSide-span-div {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    color: #fff;
+    margin-left: 10px;
+    width: 120px;
+    padding: 6px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.navSide-span-div:hover {
+    background-color: #F7F7F7;
+    color: #2b2a2a;
+}
+
+.navSide-logout {
+    border-top: 1px solid grey;
+}
+
+.navSide-link-tag {
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    .navSide-main-menu {
+        width: 60px;
+    }
+
+    .navSide-main-menu:hover {
+        width: 230px; 
+    }
+
+    .navSide-icon-content-container {
+        justify-content: center; 
+    }
+
+    .navSide-icon-text-div {
+        justify-content: flex-start;
+        opacity: 1; 
+    }
+
+    .navSide-main-menu:hover .navSide-icon-text-div {
+        opacity: 1; 
+    }
+
+    .navSide-span-div {
+        display: none; 
+    }
+
+    .navSide-main-menu:hover .navSide-span-div {
+        display: block; 
+    }
+
+    .navSide-icon {
+        font-size: 30px;
+        margin-left: 0;
+    }
+}

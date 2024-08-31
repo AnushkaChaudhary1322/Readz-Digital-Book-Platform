@@ -1,0 +1,74 @@
+/* header.css */
+
+.app-bar {
+    position: fixed;
+    background-color: #1d1c1c;
+    height: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transform: translateY(-65px);
+}
+
+.header-logo-img {
+    width: auto;
+    height: 55px;
+}
+
+.tool-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 28px;
+}
+
+.item {
+    margin-right: 30px;
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+}
+
+.logout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-profile-icon{
+    font-size: 30px;
+}
+
+
+
+.logout-link {
+    margin-right: 30px;
+    background: url('https://i.pinimg.com/564x/3f/10/ae/3f10ae365b60fbebb4c685be08d488b6.jpg');
+    /* background-size: cover; */
+    width: 100%; 
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .header-logo-img {
+        width: auto;
+        height: 35px;
+    }
+}
+
+
+
+

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.main-container{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    transform: translateY(-70px);
+}
+
+.background-img{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.login-body {
+    background: rgba(245, 245, 245, 0.877);
+    position: absolute;
+    width: 450px;
+    /* height: 622px; */
+    height: 500px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    display: flex;
+    margin: 5%;
+    /* overflow: hidden; */
+}
+
+.login-container{
+    display: block;
+    margin-left: 70px;
+    padding: 3%;
+}
+
+.login-logo{
+    position: absolute;
+    width: 35%;
+    /* display: block;
+    margin: 0 auto 20px auto; */
+    transform: translate(285px, 160px);
+    overflow: visible;
+
+}
+
+/* .sigUp-logo{
+    width: 35%;
+    display: block;
+    margin: 0 auto 20px auto;
+} */
+
+.login-title {
+    font-family: "Cinzel Decorative", serif;;
+    font-weight: 700;
+    font-size: 2rem;
+    font-style: normal;
+}
+
+.login-validation-error,
+.error-text{
+    color: red;
+}
+
+.form-box{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+
+.login-and-signup-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+    margin-top: 30px;
+}
+
+.login-button{
+    width: 100px;
+}
+
+.signup-button{
+    width: 100px;
+    height: 40px;
+    border: 2px solid rgb(122, 122, 122);
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.line{
+    border-bottom: 1px solid rgb(122, 122, 122);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.other-login-option{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-signUp{
+    width: 250px;
+    height: 40px;
+    margin-bottom: 20px;
+    background: transparent;
+    border: 2px solid rgb(122, 122, 122);
+    border-radius:10px ;
+}
