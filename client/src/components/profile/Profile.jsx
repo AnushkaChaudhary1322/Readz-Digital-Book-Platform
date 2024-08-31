@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { API } from "../../service/api";
-import Post from "../home/post/Post";
+import PostLib from "../home/post/PostLib";
 import { Link } from "react-router-dom";
+import './profilePage.css';
+import WriteStory from '../home/WriteStory';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
+import { TiMessages } from "react-icons/ti";
 
 export default function Profile() {
   const [formData, setFormData] = useState({
@@ -71,46 +76,56 @@ export default function Profile() {
   };
 
   return (
-    <div>
-      <h1>Profile</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
+    <>
+
+      <Header/>
+
+      <div className="userprofile-page-wrapper-parent">
+
+        <div className="userprofile-page-wrapper">
+
+        <div className="user-profile-form-div">
+        <div className="profile-banner">
         </div>
-        <div>
-          <label>Username:</label>
-          <input
-            type="text"
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit">Update Profile</button>
-        {message && <div>{message}</div>}
-      </form>
-      <div>
-        <h1>Your posts</h1>
-        {/* <div>
-          {posts.map((post) => (
-            <div key={post._id}>
-              <img src={post.image} alt={post.title} />
-              <h3>{post.title}</h3>
+        <div className="user-profile-img-form">
+          <div className="user-profile-img">
+
+          </div>
+        <form onSubmit={handleSubmit} className="user-profile-form">
+          <div className="user-profile-form-data-btn">
+            <div className="user-profile-form-content">
+              <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                className="user-profile-form-name"/> <br />
+                <label className="user-profile-form-label">Username:</label><br />
+                <input
+                  type="text"
+                  name="username"
+                  value={formData.username}
+                  onChange={handleChange}
+                  className="user-profile-form-email-user-page"/>
             </div>
-          ))}
-        </div> */}
-        <div className="posts-container">
+            <div >
+              <button type="submit" className="user-profile-form-update-btn">Update Profile</button>
+            </div>
+          </div>
+          {message && <div>{message}</div>}
+        </form>
+        </div>
+        </div>
+        <div className="user-profile-your-books">
+          <div className="user-profile-your-books-heading">
+            <h2>Your Uploaded Books</h2>
+          </div>
+        <div className="user-profile-posts-container">
             {
                 posts?.length ? posts.map(post => (
                     <div key={post._id} className="post-item">
                         <Link to={`details/${post._id}`} className="post-link">
-                            <Post post={post} />
+                            <PostLib post={post} />
                         </Link>
                     </div>
                 )) : <div className="no-data">
@@ -118,7 +133,26 @@ export default function Profile() {
                     </div>
             }
         </div>
+        </div>
+        </div>
+
+        <div className="userproflie-right-column">
+          <div className="userproflie-right-column">
+              <div>
+                <WriteStory/>
+              </div>
+              <div className="user-profile-blog-div">
+                <h3>Tell Your Story</h3>
+                <p>Keep everyone in the loop with your latest updates, ideas, and books. Let people discover what you've been working on!</p>
+                <div className="user-profile-blog-btn">Start Sharing</div>
+              </div>
+              <TiMessages className="user-profile-blog-icon"/>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <Footer/>
+
+    </>
   );
 }
