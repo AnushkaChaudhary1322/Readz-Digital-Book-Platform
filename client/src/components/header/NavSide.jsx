@@ -78,7 +78,7 @@ const NavSide = () => {
                                     <VscAccount className="navSide-icon" />
                                 </div>
                                 <div className='navSide-span-div'>
-                                    <span className="navSide-text">Login</span>
+                                    <span className="navSide-text">Profile</span>
                                 </div>
                             </div>
                         </Link>

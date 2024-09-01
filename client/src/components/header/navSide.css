@@ -5,10 +5,6 @@
     overflow-x: hidden;
 }
 
-/* .navSide-scrollbar:hover {
-    overflow-y: scroll;
-} */
-
 #navSide-style-1::-webkit-scrollbar-track {
     border-radius: 2px;
 }
@@ -38,7 +34,8 @@
 }
 
 .navSide-main-menu:hover {
-    width: 250px; 
+    width: 210px; 
+    transition: transform 0.5s ease-in-out;
 }
 
 .navSide-icon-content-wrapper {
@@ -83,14 +80,13 @@
     color: #fff;
     margin-left: 10px;
     width: 120px;
-    padding: 6px;
-    border: 1px solid transparent;
-    border-radius: 10px;
+    padding: 10px;
 }
 
 .navSide-span-div:hover {
     background-color: #F7F7F7;
     color: #2b2a2a;
+    transition: transform 0.5s ease-in-out;
 }
 
 .navSide-logout {

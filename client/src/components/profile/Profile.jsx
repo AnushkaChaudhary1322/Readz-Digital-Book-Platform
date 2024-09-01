@@ -117,10 +117,11 @@ export default function Profile() {
         </div>
         </div>
         <div className="user-profile-your-books">
-          <div className="user-profile-your-books-heading">
+
+        <div className="user-profile-posts-container">
+        <div className="user-profile-your-books-heading">
             <h2>Your Uploaded Books</h2>
           </div>
-        <div className="user-profile-posts-container">
             {
                 posts?.length ? posts.map(post => (
                     <div key={post._id} className="post-item">
@@ -133,9 +134,6 @@ export default function Profile() {
                     </div>
             }
         </div>
-        </div>
-        </div>
-
         <div className="userproflie-right-column">
           <div className="userproflie-right-column">
               <div>
@@ -149,6 +147,10 @@ export default function Profile() {
               <TiMessages className="user-profile-blog-icon"/>
           </div>
         </div>
+        </div>
+        </div>
+
+
       </div>
 
       <Footer/>

@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    max-width: 80%;
+    max-width: 100%;
     flex-wrap: wrap;
 }
 
@@ -22,23 +22,18 @@
 }
 
 .user-profile-form-div{
-    width: 90%;
-    height: 380px;
+    width: 100%;
+    height: 450px;
     display: flex;
     flex-direction: column;
-    border: 10px solid transparent;
-    border-radius: 10px;
-    margin-top: 50px;
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .profile-banner{
-    background: url('https://i.pinimg.com/564x/e8/68/b6/e868b678e3c7e0e0387323849a0eb5d7.jpg') ;
-    background-size: cover;
+    background: url('https://images.unsplash.com/photo-1472173148041-00294f0814a2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') ;
+    object-fit:cover;
+    object-position: center;
     width: 100%;
-    height: 300px;
-    border: 1px soid transparent;
-    border-radius: 10px;
+    height: 400px;
 }
 
 .user-profile-img{
@@ -49,22 +44,23 @@
     border: 5px solid white;
     border-radius: 50%;
     position: absolute;
-    margin-top: -100px;
-    margin-left: 20px;
+    margin-top: -70px;
+    margin-left: 150px;
 }
 
 .user-profile-form{
     display: flex;
-    flex-direction: column;
     margin-left: 250px;
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .user-profile-form-data-btn{
-    width: 98%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
+    margin-left: 150px;
+    flex-direction: row;
 }
 
 .user-profile-form input{
@@ -109,21 +105,20 @@
 .user-profile-your-books{
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 20px;
     margin-bottom: 30px;
     height: auto;
     min-height: 600px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 
 .user-profile-your-books-heading{
     font-family: 'Courier New', Courier, monospace;
     font-size: 28px;
     font-weight: 600;
-    width: 100%;
+    width: 85%;
 }
 
 .user-profile-posts-container{
@@ -132,17 +127,16 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 80%;
 }
 
 .userproflie-right-column{
     display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 500px;
+    width: 180px;
     margin-right: 20px;
+    margin-top: 35px;
     gap: 30px;
-    margin-right: 30px;
-    padding-top: 25px;
 }
 
 .user-profile-blog-div{
@@ -180,13 +174,9 @@
 
 @media (max-width: 768px) {
 
-    .userprofile-page-wrapper{
-        max-width: 90%;
-    }
-
     .user-profile-img{
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         margin-top: -50px;
         margin-left: 20px;
     }
@@ -196,10 +186,6 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 0;
-    }
-
-    .user-profile-form-data-btn{
-        flex-direction: column;
     }
 
     .user-profile-form-name{
@@ -216,9 +202,13 @@
         
     }
 
+    .user-profile-form-data-btn{
+        flex-direction: column;
+    }
+
     .user-profile-form-update-btn{
         margin-top: 4px;
-        width: 50%; 
+        width: 25%; 
         padding: 6px;
         font-size: 14px;
     }
@@ -230,7 +220,6 @@
     .user-profile-blog-icon{
         display: block;
         background: url('https://i.pinimg.com/564x/3f/10/ae/3f10ae365b60fbebb4c685be08d488b6.jpg');
-        /* width: 100%;  */
         color: white;
         cursor: pointer;
         padding: 5px;
@@ -246,7 +235,11 @@
         width: 50px;
         height: 150px;
         position: absolute;
-        transform: translate(95px,145px);
+        transform: translate(140px,-95px);
+    }
+
+    .user-profile-posts-container{
+        width: 100%;
     }
 
     .user-profile-your-books{
@@ -257,8 +250,22 @@
 
   @media (max-width: 576px) {
     .user-profile-form{
-        margin-left: 100px;
+        margin-left: 50px;
         margin-bottom: 0;
+    }
+
+    .user-profile-form-update-btn{
+        margin-top: 4px;
+        width: 50%; 
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .userproflie-right-column{
+        width: 50px;
+        height: 150px;
+        position: absolute;
+        transform: translate(110px,-95px);
     }
     
   }
