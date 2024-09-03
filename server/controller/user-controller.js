@@ -117,6 +117,22 @@ export const addLibrary = async (request, response) => {
         response.status(500).json({ msg: 'Error while adding to library' });
     }
 }
+export const addFavourites = async (request, response) => {
+    try {
+        const user = await User.findOne({ username: request.user.username });
+        if (!user) {
+            return response.status(404).json({ msg: 'User not found' });
+        }
+        user.favourites.push(request.body.postId);
+        await user.save();
+
+        response.status(200).json({ msg: 'Post added to library' });
+    }   
+    catch{
+        console.error('Error while adding to library:', error);
+        response.status(500).json({ msg: 'Error while adding to library' });
+    }
+}
 
 
 export const getLibraryPosts = async (request, response) => {
@@ -127,6 +143,20 @@ export const getLibraryPosts = async (request, response) => {
         }
         const posts = await Post.find({ _id: { $in: user.library } });
         response.status(200).json(posts);
+    }
+    catch (error) {
+        console.error('Error while getting library posts:', error);
+        response.status(500).json({ msg: 'Error while getting library posts' });
+    }
+}
+export const getFavourites = async (request, response) => {
+    try {
+        const user = await User.findOne({ username: request.user.username });
+        if (!user) {
+            return response.status(404).json({ msg: 'User not found' });
+        }
+        const favourite = await Post.find({ _id: { $in: user.favourites } });
+        response.status(200).json(favourite);
     }
     catch (error) {
         console.error('Error while getting library posts:', error);

@@ -8,8 +8,14 @@ import { API } from '../../../service/api';
 const Post = ({ post }) => {
     const [isFavorited, setIsFavorited] = useState(false);
 
-    const handleFavoriteClick = () => {
+    const handleFavoriteClick = async() => {
         setIsFavorited(!isFavorited);
+        let response = await API.addFavourites({ postId: post._id });
+        if (response.isSuccess) {
+            alert('Post added to favourites');
+        } else {
+            alert('Failed to add post to favourites');
+        }
     };
 
     const url = post.picture

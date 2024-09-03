@@ -3,7 +3,7 @@ import express from 'express';
 import { createPost, updatePost, deletePost, getPost, getAllPosts , getUserPost} from '../controller/post-controller.js';
 import { uploadImage, getImage } from '../controller/image-controller.js';
 import { newComment, getComments, deleteComment } from '../controller/comment-controller.js';
-import { loginUser, singupUser, logoutUser, getUser, updateUser, getLibraryPosts, addLibrary } from '../controller/user-controller.js';
+import { loginUser, singupUser, logoutUser, getUser, updateUser, getLibraryPosts, addLibrary, getFavourites, addFavourites } from '../controller/user-controller.js';
 import { authenticateToken, createNewToken } from '../controller/jwt-controller.js';
 
 import upload from '../utils/upload.js';
@@ -35,5 +35,8 @@ router.get('/user', authenticateToken, getUser);
 router.put('/user/update', authenticateToken, updateUser);
 router.get('/user/library', authenticateToken, getLibraryPosts);
 router.post('/user/add-library', authenticateToken, addLibrary);
+
+router.post('/user/add-favourites', authenticateToken, addFavourites);
+router.get('/user/favourites', authenticateToken, getFavourites);
 
 export default router;

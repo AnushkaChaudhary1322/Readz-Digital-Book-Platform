@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-
 const userSchema = mongoose.Schema({
     name: {
         type: String,
@@ -21,10 +20,11 @@ const userSchema = mongoose.Schema({
     library: {
         type: Array,
         default: []
+    },
+    favourites: {
+        type: Array,
+        default: []
     }
 });
-
-
 const user = mongoose.model('user', userSchema);
-
 export default user;

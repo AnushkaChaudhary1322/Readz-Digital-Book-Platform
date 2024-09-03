@@ -22,9 +22,6 @@ export const API_NOTIFICATION_MESSAGES = {
     }
 }
 
-// API SERVICE URL
-// SAMPLE REQUEST
-// NEED SERVICE CALL: { url: "/", method: "POST/GET/PUT/DELETE" }
 export const SERVICE_URLS = {
     userLogin: { url: '/login', method: 'POST' },
     userSignup: { url: '/signup', method: 'POST' },
@@ -42,5 +39,7 @@ export const SERVICE_URLS = {
     updateUser: { url: 'user/update', method: 'PUT' },
     getUserPosts: { url: 'post', method: 'GET' },    
     addLibrary: { url: 'user/add-library', method: 'POST' },
-    getLibraryPosts: { url: 'user/library', method: 'GET' }
+    addFavourites: { url: 'user/add-favourites', method: 'POST' },
+    getLibraryPosts: { url: 'user/library', method: 'GET' },
+    getFavourites: { url: 'user/favourites', method: 'GET' },
 }

@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-
 const PostSchema = mongoose.Schema({
     title: {
         type: String,
@@ -26,8 +25,5 @@ const PostSchema = mongoose.Schema({
         type: Date
     }
 });
-
-
 const post = mongoose.model('post', PostSchema);
-
 export default post;

@@ -6,6 +6,7 @@ import './library.css';
 
 export default function AddToLibrary() {
     const [posts, setPosts] = useState([]);
+    const [favourites, setFavourites] = useState([]);
     const [activeSection, setActiveSection] = useState('library'); 
 
     useEffect(() => {
@@ -23,6 +24,23 @@ export default function AddToLibrary() {
         };
         fetchData();
     }, []);
+
+    useEffect(() => {
+        const fetchFavourites = async () => {
+            try{
+                const response = await API.getFavourites();
+                if (response.isSuccess) {
+                    setFavourites(response.data);
+                } else {
+                    console.log(response.msg);
+                }
+            }
+            catch(error){
+                console.error("Error fetching favourites:", error);
+            }
+        };
+        fetchFavourites();
+    }, [])
 
     const handleSectionChange = (section) => {
         setActiveSection(section);
@@ -119,7 +137,19 @@ export default function AddToLibrary() {
                 <div 
                     className={`library-your-favorite-section ${activeSection === 'favorite' ? 'visible' : 'hidden'}`}
                 >
-                    <h3>Your Favorite Books Will Be Shown Here</h3>
+                    <div className="posts-container-library-readingList">
+                        {
+                            favourites?.length ? favourites.map(post => (
+                                <div key={post._id} className="post-item">
+                                    <div className='post-link'>
+                                        <PostLib post={post} />
+                                    </div>
+                                </div>
+                            )) : <div className="no-data">
+                                    Error adding to library. Please try again.
+                                </div>
+                        }
+                    </div>
                 </div>
             </div>
 
