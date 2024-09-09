@@ -125,7 +125,7 @@ export default function Profile() {
             {
                 posts?.length ? posts.map(post => (
                     <div key={post._id} className="post-item">
-                        <Link to={`details/${post._id}`} className="post-link">
+                        <Link to={`/details/${post._id}`} className="post-link">
                             <PostLib post={post} />
                         </Link>
                     </div>

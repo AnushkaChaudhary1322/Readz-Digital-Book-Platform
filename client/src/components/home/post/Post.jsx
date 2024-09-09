@@ -34,11 +34,11 @@ const Post = ({ post }) => {
 
     return (
         <div className="post-container">
-            <Link to={`details/${post._id}`} className='post-link-link-link'>
+            <Link to={`/details/${post._id}`} className='post-link-link-link'>
             <img className="post-image" src={url} alt="post" />
             </Link>
             <p className="post-category">{post.categories}</p>
-            <Link to={`details/${post._id}`} className='post-link-link-link'>
+            <Link to={`/details/${post._id}`} className='post-link-link-link'>
             <div className="post-heading">{post.title}</div>
             </Link>
             <p className="post-author">Author: {post.username}</p>
