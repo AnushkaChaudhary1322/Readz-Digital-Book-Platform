@@ -1,86 +1,123 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 
-*{
+
+/* Main Container */
+.main-container-login {
+    position: fixed;
+    /* background-color: red; */
+    background: url('./lib-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 98.7vw;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    margin-top: -65px;
 }
 
-body{
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.main-container{
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    transform: translateY(-70px);
-}
-
-.background-img{
+/* Background Image */
+/* .background-img-login {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-}
+} */
 
+/* Login Body */
 .login-body {
-    background: rgba(245, 245, 245, 0.877);
-    position: absolute;
+    /* background: rgba(245, 245, 245, 0.877); */
+    background-color: yellow;
+    /* position: absolute; */
     width: 450px;
-    /* height: 622px; */
     height: 500px;
-    border: 1px solid transparent;
     border-radius: 20px;
     display: flex;
-    margin: 5%;
-    /* overflow: hidden; */
+    /* margin: 5%; */
+    margin-top: 5%;
+    margin-left: 5%;
 }
 
-.login-container{
+/* Login Container */
+.login-container {
+    background-color: #6200ea;
     display: block;
     margin-left: 70px;
     padding: 3%;
 }
 
-.login-logo{
+/* Login Logo */
+.login-logo {
+    background-color: aqua;
     position: absolute;
-    width: 35%;
-    /* display: block;
-    margin: 0 auto 20px auto; */
+    width: 10%;
     transform: translate(285px, 160px);
     overflow: visible;
-
 }
 
-/* .sigUp-logo{
-    width: 35%;
-    display: block;
-    margin: 0 auto 20px auto;
-} */
-
+/* Login Title */
 .login-title {
-    font-family: "Cinzel Decorative", serif;;
+    font-family: "Cinzel Decorative", serif;
     font-weight: 700;
     font-size: 2rem;
-    font-style: normal;
 }
 
+/* Error Text */
 .login-validation-error,
-.error-text{
+.error-text-login {
     color: red;
 }
 
-.form-box{
+/* Form Box */
+.form-box-login {
+    background-color: magenta;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     width: 300px;
+    position: relative;
 }
 
+/* Input Field Styles */
+.input-field-login {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    margin-top: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-.login-and-signup-buttons{
+.input-field-login:focus {
+    border-color: #6200ea; 
+    box-shadow: 0 0 5px rgba(98, 0, 234, 0.5);
+}
+
+/* Label Float Animation */
+.form-box-login .login-lable {
+    background-color: brown;
+    position: relative;
+    left: 5px;
+    top: -25px;
+    color: #aaa;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.input-field-login:focus + .login-lable,
+.input-field-login:not(:placeholder-shown) + .login-lable {
+    position: relative;
+    top: -45px;
+    left: 5px;
+    font-size: 14px;
+    color: #6200ea; 
+}
+
+/* Login and Signup Buttons */
+.login-and-signup-buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -89,26 +126,53 @@ body{
     margin-top: 30px;
 }
 
-.login-button{
-    width: 100px;
-}
-
-.signup-button{
+.login-button,
+.signup-button-login {
     width: 100px;
     height: 40px;
-    border: 2px solid rgb(122, 122, 122);
+    padding: 10px 20px;
+    border: none;
     border-radius: 10px;
-    background: transparent;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.line{
+.login-button {
+    background-color: #6200ea;
+    color: white;
+}
+
+.login-button:hover {
+    background-color: #3700b3; /* Darker shade on hover */
+}
+
+.login-button:active {
+    transform: scale(0.98); /* Slightly smaller on click */
+}
+
+.signup-button-login {
+    background: transparent;
+    border: 2px solid rgb(122, 122, 122);
+    color: #6200ea;
+}
+
+.signup-button-login:hover {
+    background-color: rgba(98, 0, 234, 0.1);
+}
+
+.signup-button-login:active {
+    transform: scale(0.98);
+}
+
+/* Separator Line */
+.line-login {
     border-bottom: 1px solid rgb(122, 122, 122);
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.other-login-option{
+/* Other Login Options */
+.other-login-option {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -116,11 +180,21 @@ body{
     align-items: center;
 }
 
-.google-signUp{
+.google-signUp-login {
     width: 250px;
     height: 40px;
     margin-bottom: 20px;
     background: transparent;
     border: 2px solid rgb(122, 122, 122);
-    border-radius:10px ;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.google-signUp-login:hover {
+    background-color: rgba(98, 0, 234, 0.1);
+}
+
+.google-signUp-login:active {
+    transform: scale(0.98);
 }

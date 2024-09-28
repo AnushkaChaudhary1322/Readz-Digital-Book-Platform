@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
-import './login.css'; 
-import logo from './logo-now.png'; 
-import background from './lib-1.jpg'; 
-import { TextField, Box, Button, Typography } from '@mui/material';
+import './login.css';
+import logo from './logo-now.png';
+import background from './lib-1.jpg';
 import { useNavigate } from 'react-router-dom';
 
 import { API } from '../../service/api';
@@ -121,142 +120,147 @@ const Login = ({ isUserAuthenticated }) => {
     };
 
     return (
-        <div className='main-container'>
-          <div className='image-container'>
-          <img src={background} alt="background" className="background-img" />
-          </div>
-          <div className="login-body"> 
-            <Box className="login-container">
-                {
-                    account === 'login' ?
-                    <>
-                    <img src={logo} alt="Logo" className="login-logo" />
-                        <div className="login-title">Welcome Back!</div>
-                        <Typography>Lets continue from where you left
-                        </Typography>
-                        <Typography className="login-validation-error">
-                            {loginValidationError}
-                        </Typography>
-                        <Box className="form-box">
-                            <TextField
-                                variant="standard"
-                                value={login.username}
-                                onChange={onValueChange}
-                                name="username"
-                                label="Enter Email"
-                                onBlur={(e) => handleBlur(e, validateUsername, setLoginErrors, 'username')}
-                                className="input-field"
-                            />
-                            <Typography className="error-text">{loginErrors.username}</Typography>
-                            <TextField
-                                variant="standard"
-                                type="password"
-                                value={login.password}
-                                onChange={onValueChange}
-                                name="password"
-                                label="Enter Password"
-                                onBlur={(e) => handleBlur(e, validatePassword, setLoginErrors, 'password')}
-                                className="input-field"
-                            />
-                            <Typography className="error-text">{loginErrors.password}</Typography>
-                            <div className='login-and-signup-buttons'>
-                            <Button
-                                variant="contained"
-                                onClick={loginUser}
-                                className="login-button"
-                            >
-                                Login
-                            </Button>
-                            <button
-                                onClick={toggleSignup}
-                                className="signup-button"
-                            >
-                                Sign Up
-                            </button>
+        <div className='main-container-login'>
+            <div className="login-body">
+                <div className="login-container">
+                    {account === 'login' ? (
+                        <>
+                            <img src={logo} alt="Logo" className="login-logo" />
+                            <div className="login-title">Welcome Back!</div>
+                            <p>Lets continue from where you left</p>
+                            <p className="login-validation-error">
+                                {loginValidationError}
+                            </p>
+                            <div className="form-box-login">
+                                <div className="input-field-container-login">
+                                    <input
+                                        type="text"
+                                        value={login.username}
+                                        onChange={onValueChange}
+                                        name="username"
+                                        placeholder=" "
+                                        onBlur={(e) => handleBlur(e, validateUsername, setLoginErrors, 'username')}
+                                        className="input-field-login"
+                                    />
+                                    <label className='login-lable'>Enter Email</label>
+                                    <p className="error-text-login">{loginErrors.username}</p>
+                                </div>
+                                <div className="input-field-container-login">
+                                    <input
+                                        type="password"
+                                        value={login.password}
+                                        onChange={onValueChange}
+                                        name="password"
+                                        placeholder=" "
+                                        onBlur={(e) => handleBlur(e, validatePassword, setLoginErrors, 'password')}
+                                        className="input-field-login"
+                                    />
+                                    <label className='login-lable'>Enter Password</label>
+                                    <p className="error-text-login">{loginErrors.password}</p>
+                                </div>
+                                <div className='login-and-signup-buttons'>
+                                    <button
+                                        onClick={loginUser}
+                                        className="login-button"
+                                    >
+                                        Login
+                                    </button>
+                                    <button
+                                        onClick={toggleSignup}
+                                        className="signup-button-login"
+                                    >
+                                        Sign Up
+                                    </button>
+                                </div>
+                                <div className='line-login'></div>
+                                <div className='other-login-option'>
+                                    <button className='google-signUp-login'>
+                                        Log In with Google
+                                    </button>
+                                    <button className='google-signUp-login'>
+                                        Log In with Facebook
+                                    </button>
+                                </div>
                             </div>
-                            <div className='line'></div>
-                            <div className='other-login-option'>
-                            <button className='google-signUp'>
-                              Log In with Google
-                            </button>
-                            <button className='google-signUp'>
-                              Log In with Facebook
-                            </button>
+                        </>
+                    ) : (
+                        <>
+                            <img src={logo} alt="Logo" className="login-logo" />
+                            <div className="login-title">Welcome to READZ!</div>
+                            <p>Lets start a new journey with us</p>
+                            <p className="login-validation-error">
+                                {signupValidationError}
+                            </p>
+                            <div className="form-box-login">
+                                <div className="input-field-container-login">
+                                    <input
+                                        type="text"
+                                        value={signup.name}
+                                        onChange={onInputChange}
+                                        name="name"
+                                        placeholder=" "
+                                        onBlur={(e) => handleBlur(e, validateName, setSignupErrors, 'name')}
+                                        className="input-field-login"
+                                    />
+                                    <label className='login-lable'>Enter Name</label>
+                                    <p className="error-text-login">{signupErrors.name}</p>
+                                </div>
+                                <div className="input-field-container-login">
+                                    <input
+                                        type="text"
+                                        value={signup.username}
+                                        onChange={onInputChange}
+                                        name="username"
+                                        placeholder=" "
+                                        onBlur={(e) => handleBlur(e, validateUsername, setSignupErrors, 'username')}
+                                        className="input-field-login"
+                                    />
+                                    <label className='login-lable'>Enter Email</label>
+                                    <p className="error-text-login">{signupErrors.username}</p>
+                                </div>
+                                <div className="input-field-container-login">
+                                    <input
+                                        type="password"
+                                        value={signup.password}
+                                        onChange={onInputChange}
+                                        name="password"
+                                        placeholder=" "
+                                        onBlur={(e) => handleBlur(e, validatePassword, setSignupErrors, 'password')}
+                                        className="input-field-login"
+                                    />
+                                    <label className='login-lable'>Enter Password</label>
+                                    <p className="error-text-login">{signupErrors.password}</p>
+                                </div>
+                                <div className='login-and-signup-buttons'>
+                                    <button
+                                        onClick={signupUser}
+                                        className="login-button"
+                                    >
+                                        SIGNUP
+                                    </button>
+                                    <button
+                                        onClick={toggleSignup}
+                                        className="signup-button-login"
+                                    >
+                                        Log In
+                                    </button>
+                                </div>
+                                <div className='line-login'></div>
+                                <div className='other-login-option'>
+                                    <button className='google-signUp-login'>
+                                        Sign Up with Google
+                                    </button>
+                                    <button className='google-signUp-login'>
+                                        Sign Up with Facebook
+                                    </button>
+                                </div>
                             </div>
-                        </Box>
-                    </>
-                    :
-                    <>
-                    <img src={logo} alt="Logo" className="login-logo" />
-                    <div className="login-title">Welcome to READZ!</div>
-                        <Typography>Lets start a new journey with us
-                        </Typography>
-                        <Typography className="login-validation-error">
-                            {signupValidationError}
-                        </Typography>
-                        <Box className="form-box">
-                            <TextField
-                                variant="standard"
-                                value={signup.name}
-                                onChange={onInputChange}
-                                name="name"
-                                label="Enter Name"
-                                onBlur={(e) => handleBlur(e, validateName, setSignupErrors, 'name')}
-                                className="input-field"
-                            />
-                            <Typography className="error-text">{signupErrors.name}</Typography>
-                            <TextField
-                                variant="standard"
-                                value={signup.username}
-                                onChange={onInputChange}
-                                name="username"
-                                label="Enter Email"
-                                onBlur={(e) => handleBlur(e, validateUsername, setSignupErrors, 'username')}
-                                className="input-field"
-                            />
-                            <Typography className="error-text">{signupErrors.username}</Typography>
-                            <TextField
-                                variant="standard"
-                                type="password"
-                                value={signup.password}
-                                onChange={onInputChange}
-                                name="password"
-                                label="Enter Password"
-                                onBlur={(e) => handleBlur(e, validatePassword, setSignupErrors, 'password')}
-                                className="input-field"
-                            />
-                            <Typography className="error-text">{signupErrors.password}</Typography>
-                            <div className='login-and-signup-buttons'>
-                            <Button
-                                variant="contained"
-                                onClick={signupUser}
-                                className="login-button"
-                            >
-                                SIGNUP
-                            </Button>
-                            <button
-                                onClick={toggleSignup}
-                                className="signup-button"
-                            >
-                                Log In
-                            </button>
-                            </div>
-                            <div className='line'></div>
-                            <div className='other-login-option'>
-                            <button className='google-signUp'>
-                              Sign Up with Google
-                            </button>
-                            <button className='google-signUp'>
-                              Sign Up with Facebook
-                            </button>
-                            </div>
-                        </Box>
-                    </>
-                }
-            </Box>
-        </div>
+                        </>
+                    )}
+                </div>
+            </div>
         </div>
     );
-}
+};
 
 export default Login;
